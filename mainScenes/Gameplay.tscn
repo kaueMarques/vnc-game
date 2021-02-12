@@ -1,0 +1,300 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Textures/bg.jpeg" type="Texture" id=2]
+[ext_resource path="res://enemies/en_1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://enemies/en_1_boss.tscn" type="PackedScene" id=4]
+[ext_resource path="res://mainScenes/EndScreen.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Textures/1.png" type="Texture" id=6]
+[ext_resource path="res://mainScenes/lixos.gd" type="Script" id=7]
+[ext_resource path="res://Textures/2.png" type="Texture" id=9]
+
+[sub_resource type="AtlasTexture" id=1]
+
+[sub_resource type="AtlasTexture" id=2]
+
+[sub_resource type="AtlasTexture" id=3]
+
+[node name="Gameplay" type="Node2D"]
+
+[node name="bg" type="Sprite" parent="."]
+position = Vector2( 248.266, 334.978 )
+scale = Vector2( 0.337866, 0.572369 )
+texture = ExtResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 234.92, 599.94 )
+
+[node name="Mobile" type="Node2D" parent="."]
+
+[node name="btnRight" type="TouchScreenButton" parent="Mobile"]
+position = Vector2( -0.383637, 611.027 )
+scale = Vector2( 0.0565139, 0.0598239 )
+normal = ExtResource( 9 )
+pressed = SubResource( 1 )
+
+[node name="btnLeft" type="TouchScreenButton" parent="Mobile"]
+position = Vector2( 385.131, 615.536 )
+scale = Vector2( 0.0601913, 0.0540454 )
+normal = ExtResource( 6 )
+pressed = SubResource( 2 )
+
+[node name="btnShot" type="TouchScreenButton" parent="Mobile"]
+position = Vector2( 0.565605, -22.4776 )
+scale = Vector2( 468.962, 633.288 )
+normal = SubResource( 3 )
+shape_visible = false
+
+[node name="EndScreen" parent="." instance=ExtResource( 5 )]
+position = Vector2( 272.415, 729.507 )
+
+[node name="lixos" type="Node2D" parent="."]
+position = Vector2( -11.314, 0 )
+script = ExtResource( 7 )
+
+[node name="en_1" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 345.717, -608.372 )
+
+[node name="en_3" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 226.607, -184.91 )
+
+[node name="en_6" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 392.207, -753.248 )
+
+[node name="en_7" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 264.285, -543.672 )
+
+[node name="en_9" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 388.876, -388.825 )
+
+[node name="en_10" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 373.774, -532.345 )
+
+[node name="en_11" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 256.734, -706.018 )
+
+[node name="en_13" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 290.713, -849.487 )
+
+[node name="en_14" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 392.652, -653.161 )
+
+[node name="en_17" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 336.019, -1011.83 )
+
+[node name="en_19" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 369.999, -1298.77 )
+
+[node name="en_21" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 260.509, -1502.65 )
+
+[node name="en_25" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 306.022, -1787.04 )
+
+[node name="en_26" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 368.88, -1661.33 )
+
+[node name="en_27" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 431.737, -1140.51 )
+
+[node name="en_28" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 431.737, -1140.51 )
+
+[node name="en_29" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 339.795, -1895.3 )
+
+[node name="en_24" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 268.29, -1303.01 )
+
+[node name="en_41" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 158.801, -1506.89 )
+
+[node name="en_43" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 204.313, -1791.28 )
+
+[node name="en_47" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 267.171, -1665.57 )
+
+[node name="en_50" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 238.086, -1899.54 )
+
+[node name="en_30" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 391.44, -2239.88 )
+
+[node name="en_31" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 255.522, -2292.74 )
+
+[node name="en_32" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 315.93, -2730.69 )
+
+[node name="en_33" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 217.767, -2485.29 )
+
+[node name="en_35" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 338.87, -3038.87 )
+
+[node name="en_37" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 391.44, -3409.09 )
+
+[node name="en_38" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 255.522, -3461.94 )
+
+[node name="en_39" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 315.93, -3899.9 )
+
+[node name="en_40" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 217.767, -3654.49 )
+
+[node name="en_42" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 424.3, -4058.58 )
+
+[node name="en_2" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 385.84, -1011.46 )
+
+[node name="en_4" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 231.295, -621.086 )
+
+[node name="en_8" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 277.785, -765.962 )
+
+[node name="en_12" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 149.863, -556.385 )
+
+[node name="en_15" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 274.454, -401.539 )
+
+[node name="en_16" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 259.352, -545.059 )
+
+[node name="en_18" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 142.312, -718.732 )
+
+[node name="en_20" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 176.291, -862.201 )
+
+[node name="en_22" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 278.23, -665.875 )
+
+[node name="en_23" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 221.597, -1024.55 )
+
+[node name="en_34" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 317.315, -1153.22 )
+
+[node name="en_36" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 317.315, -1153.22 )
+
+[node name="en_5" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 271.418, -1024.17 )
+
+[node name="en_44" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 390.972, -4703.93 )
+
+[node name="en_45" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 271.861, -4280.47 )
+
+[node name="en_46" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 403.062, -4210.15 )
+
+[node name="en_48" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 437.462, -4848.81 )
+
+[node name="en_49" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 309.54, -4639.23 )
+
+[node name="en_51" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 434.131, -4484.39 )
+
+[node name="en_52" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 419.029, -4627.91 )
+
+[node name="en_53" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 301.989, -4801.58 )
+
+[node name="en_55" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 335.968, -4945.05 )
+
+[node name="en_56" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 437.907, -4748.72 )
+
+[node name="en_57" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 369.948, -4541.07 )
+
+[node name="en_58" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 237.805, -5013.01 )
+
+[node name="en_59" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 381.274, -5107.4 )
+
+[node name="en_60" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 245.356, -5160.25 )
+
+[node name="en_61" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 415.253, -5394.33 )
+
+[node name="en_63" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 305.764, -5598.21 )
+
+[node name="en_65" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 234.54, -6017.3 )
+
+[node name="en_67" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 351.276, -5882.61 )
+
+[node name="en_68" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 414.134, -5756.89 )
+
+[node name="en_69" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 476.992, -5236.07 )
+
+[node name="en_70" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 476.992, -5236.07 )
+
+[node name="en_71" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 385.05, -5990.86 )
+
+[node name="en_72" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 436.694, -6335.44 )
+
+[node name="en_73" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 300.776, -6388.3 )
+
+[node name="en_74" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 361.184, -6826.26 )
+
+[node name="en_75" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 263.022, -6580.85 )
+
+[node name="en_76" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 227.103, -7056.77 )
+
+[node name="en_77" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 469.555, -6984.93 )
+
+[node name="en_79" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 287.193, -7227 )
+
+[node name="en_80" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 300.776, -7557.5 )
+
+[node name="en_81" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 361.184, -7995.46 )
+
+[node name="en_82" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 263.022, -7750.05 )
+
+[node name="en_83" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 227.103, -8225.98 )
+
+[node name="en_84" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 469.555, -8154.14 )
+
+[node name="en_86" parent="lixos" instance=ExtResource( 3 )]
+position = Vector2( 431.095, -5107.02 )
+
+[node name="en_boss_1" parent="lixos" instance=ExtResource( 4 )]
+position = Vector2( 348.497, -8429.9 )
+[connection signal="pressed" from="Mobile/btnRight" to="Player" method="_on_btnRight_pressed"]
+[connection signal="pressed" from="Mobile/btnLeft" to="Player" method="_on_btnLeft_pressed"]
+[connection signal="pressed" from="Mobile/btnShot" to="Player" method="_on_btnShot_pressed"]
+[connection signal="area_entered" from="EndScreen" to="Player" method="_on_EndScreen_area_entered"]
