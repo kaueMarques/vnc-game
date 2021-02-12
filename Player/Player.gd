@@ -4,8 +4,10 @@ var speed:float = 150
 var vel := Vector2(0, 0)
 var plBullet := preload("res://Bullet/bullet1.tscn") 
 
+
 onready var Gun := $Gun
 onready var shotDelayTimer := $shotDelayTimer
+var player = AudioStreamPlayer.new()
 
 onready var shotDelay : float = 0.1
 var dirVec := Vector2(0,0)
@@ -60,3 +62,5 @@ func _on_btnRight_pressed():
 
 func _on_btnShot_pressed():
 	actionPlayerShot()
+
+	

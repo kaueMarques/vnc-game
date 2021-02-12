@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Textures/bg.jpeg" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://mainScenes/EndScreen.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Textures/1.png" type="Texture" id=6]
 [ext_resource path="res://mainScenes/lixos.gd" type="Script" id=7]
+[ext_resource path="res://audio/tiro.wav" type="AudioStream" id=8]
 [ext_resource path="res://Textures/2.png" type="Texture" id=9]
 
 [sub_resource type="AtlasTexture" id=1]
@@ -294,7 +295,12 @@ position = Vector2( 431.095, -5107.02 )
 
 [node name="en_boss_1" parent="lixos" instance=ExtResource( 4 )]
 position = Vector2( 348.497, -8429.9 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
 [connection signal="pressed" from="Mobile/btnRight" to="Player" method="_on_btnRight_pressed"]
 [connection signal="pressed" from="Mobile/btnLeft" to="Player" method="_on_btnLeft_pressed"]
 [connection signal="pressed" from="Mobile/btnShot" to="Player" method="_on_btnShot_pressed"]
 [connection signal="area_entered" from="EndScreen" to="Player" method="_on_EndScreen_area_entered"]
+[connection signal="ready" from="AudioStreamPlayer2D" to="Player" method="_on_AudioStreamPlayer2D_ready"]
